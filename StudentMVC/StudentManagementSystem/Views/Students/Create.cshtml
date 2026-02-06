@@ -1,0 +1,19 @@
+@model StudentManagementSystem.Models.Student
+
+<h2>Add Student</h2>
+
+<form asp-action="Create" method="post">
+    <label>Name</label><br />
+    <input asp-for="Name" /><br /><br />
+
+    <label>Email</label><br />
+    <input asp-for="Email" /><br /><br />
+
+    <label>Course</label><br />
+    <input asp-for="Course" /><br /><br />
+
+    <label>Enrollment Date</label><br />
+    <input asp-for="EnrollmentDate" type="date" /><br /><br />
+
+    <button type="submit">Save</button>
+</form>

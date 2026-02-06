@@ -1,0 +1,180 @@
+/* =========================
+   GLOBAL RESET & BASE
+========================= */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    background: #f4f6f8;
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    padding: 40px 15px;
+}
+
+/* =========================
+   APP CONTAINER
+========================= */
+.app-container {
+    background: #ffffff;
+    width: 100%;
+    max-width: 450px;
+    border-radius: 10px;
+    padding: 20px;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.08);
+}
+
+/* =========================
+   HEADER
+========================= */
+.app-header {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.app-header h1 {
+    font-size: 24px;
+    color: #333;
+}
+
+/* =========================
+   TASK INPUT
+========================= */
+.task-input-section {
+    display: flex;
+    gap: 10px;
+    margin-bottom: 15px;
+}
+
+#taskInput {
+    flex: 1;
+    padding: 10px 12px;
+    border: 1px solid #ccc;
+    border-radius: 6px;
+    font-size: 14px;
+}
+
+#taskInput:focus {
+    outline: none;
+    border-color: #4a90e2;
+}
+
+#addTaskBtn {
+    padding: 10px 16px;
+    border: none;
+    background-color: #4a90e2;
+    color: #fff;
+    font-size: 14px;
+    border-radius: 6px;
+    cursor: pointer;
+}
+
+#addTaskBtn:hover {
+    background-color: #357abd;
+}
+
+/* =========================
+   FILTERS
+========================= */
+.filter-section {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 15px;
+}
+
+.filter-btn {
+    flex: 1;
+    margin: 0 3px;
+    padding: 8px 0;
+    border: 1px solid #ddd;
+    background: #f9f9f9;
+    cursor: pointer;
+    border-radius: 6px;
+    font-size: 13px;
+}
+
+.filter-btn.active {
+    background-color: #4a90e2;
+    color: #fff;
+    border-color: #4a90e2;
+}
+
+/* =========================
+   TASK LIST
+========================= */
+.task-list {
+    list-style: none;
+    max-height: 400px;
+    overflow-y: auto;
+}
+
+/* =========================
+   TASK ITEM
+========================= */
+.task-item {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background: #fafafa;
+    padding: 10px;
+    border: 1px solid #e5e5e5;
+    border-radius: 6px;
+    margin-bottom: 8px;
+    cursor: grab;
+}
+
+.task-item.dragging {
+    opacity: 0.5;
+}
+
+.task-left {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.task-left input[type="checkbox"] {
+    cursor: pointer;
+}
+
+.task-text {
+    font-size: 14px;
+    color: #333;
+}
+
+/* =========================
+   COMPLETED TASK
+========================= */
+.task-item.completed .task-text {
+    text-decoration: line-through;
+    color: #999;
+}
+
+/* =========================
+   DRAG OVER STATE
+========================= */
+.task-item.drag-over {
+    border: 2px dashed #4a90e2;
+}
+
+/* =========================
+   RESPONSIVE
+========================= */
+@media (max-width: 480px) {
+    .app-container {
+        padding: 15px;
+    }
+
+    .app-header h1 {
+        font-size: 20px;
+    }
+
+    #addTaskBtn {
+        padding: 10px 12px;
+    }
+}
