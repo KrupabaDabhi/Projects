@@ -1,0 +1,71 @@
+Prompt:
+
+"Create a detailed project plan for an E-Learning Course UI web app. List all required features, functionality, API endpoints, and a clean VS Code–friendly file structure including HTML, CSS, JS, and assets folders."
+
+Step 1: HTML Structure
+
+    Prompt:
+
+    "Generate the complete HTML file for the E-Learning Course UI based on the project plan. Include header, search input, category filter dropdown, course container, modal for course details and enrollment form. Make it fully semantic, responsive-ready, and link CSS and JS files."
+
+Step 2: CSS Styling
+
+    Prompt:
+
+    "Write a full CSS file for the E-Learning Course UI. Include styling for responsive course cards, grid layout, modal design, buttons, hover effects, form inputs, and overall modern UI. Ensure it is clean, mobile-friendly, and visually appealing."
+
+Step 3: JavaScript & jQuery Logic
+
+    Prompt:
+
+    "Write a complete JS file using jQuery for the E-Learning Course UI. Include:
+
+    Fetching courses dynamically from https://fakestoreapi.com/products.
+
+    Rendering course cards dynamically.
+
+    Populating category filter dynamically.
+
+    Implementing search and category filter simultaneously.
+
+    Opening modal on 'View Details' click with course details.
+
+    AJAX-based enrollment form submission with success message.
+
+    Modal close functionality (× button and outside click).
+    Ensure code is scalable, modular, and fully functional."
+
+Step 4: Dynamic Filtering & Search
+
+    Prompt:
+
+    "Enhance the JavaScript to allow dynamic search and category filtering for courses. Ensure the filtering works in real-time and can be combined (search + category). Explain the logic step by step."
+
+Step 5: Modal & Enrollment Form
+
+    Prompt:
+
+    "Implement a modal for course details including an enrollment form. Ensure:
+
+    Course image, title, description, and price are displayed.
+
+    Enrollment form has Name, Email, and Course Name (pre-filled).
+
+    AJAX submission without page reload.
+
+    Shows success message and resets form.
+    Explain the code and UI behavior in detail."
+
+Step 6: Responsive & Interactive Design
+
+    Prompt:
+
+    "Make the E-Learning Course UI fully responsive and interactive:
+
+    Grid layout adjusts to screen size
+
+    Modal is adaptive and centered
+
+    Hover effects and smooth transitions on cards and buttons
+
+    Test for mobile and desktop view and describe changes"

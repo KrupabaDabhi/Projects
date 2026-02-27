@@ -1,0 +1,45 @@
+Phase 1: Planning & Architecture
+
+Prompt 1: Requirement Analysis
+"I want to create a Task / To-Do Manager web app. List all functional and non-functional requirements in detail, including mandatory and bonus features, and any edge cases. Explain why each is needed."
+
+Prompt 2: Data & Storage Design
+"Design the data structure for tasks (objects/arrays/localStorage) and explain how persistence will work. Include IDs, completed status, creation timestamp, etc."
+
+Prompt 3: File Architecture
+"Create a full VS Code folder/file structure for this project with HTML, CSS, and JS modules. Explain the responsibility of each file in detail and why it’s separated."
+
+Phase 2: HTML & Layout
+
+Prompt 4: HTML Skeleton
+"Write the complete HTML structure for the To-Do Manager with all elements, IDs, and classes. Explain line by line why each element exists. Make it final-ready so that JS and CSS can hook into it without changes."
+
+Prompt 5: CSS Layout & UI
+"Create full CSS for the To-Do Manager including responsive layout, completed task style, filter buttons, and drag/drop visual cues. Explain why each class and rule is necessary. Ensure future JS features like filters and drag/drop are already compatible."
+
+Phase 3: Core JavaScript
+
+Prompt 6: localStorage Module
+"Write a JS module for localStorage functions to get and save tasks. Explain how it works and why it avoids duplication and bugs."
+
+Prompt 7: Task Logic Module
+"Write a JS module for adding tasks, toggling completion, and rendering tasks. Ensure it works with localStorage. Explain the structure of task elements and why the DOM is rebuilt every time."
+
+Prompt 8: App Initialization
+"Write a JS bootstrap file that loads tasks from storage, renders them, and sets up events for adding tasks (button + Enter key). Explain why DOMContentLoaded is used and why this order matters."
+
+Phase 4: Filters
+
+Prompt 9: Filters Module
+"Write a JS module for All / Active / Completed filters. It should only affect UI, not stored data. Include filter button state handling. Explain how filtered tasks are rendered without changing the underlying task array."
+
+Prompt 10: Integrate Filters
+"Modify renderTasks and app initialization to include filters. Explain how this preserves data integrity and works with completed tasks."
+
+Phase 5: Drag & Drop
+
+Prompt 11: Drag & Drop Module
+"Write a JS module for drag & drop task reordering. It should update the underlying task array and persist order in localStorage. Explain how it works with filters and completed tasks without breaking existing features."
+
+Prompt 12: Integrate Drag & Drop
+"Integrate drag/drop module in app initialization. Explain why drag/drop on the main task array prevents bugs and ensures persistence."

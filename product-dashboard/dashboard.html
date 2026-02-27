@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dashboard - Product Management</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/dashboard.css">
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="js/utils.js"></script>
+    <script src="js/dashboard.js" defer></script>
+</head>
+<body>
+    <div class="dashboard">
+        <aside class="sidebar">
+            <h2>Product Management</h2>
+            <ul>
+                <li><a href="#">Dashboard</a></li>
+                <li><a href="#" id="addProductBtn">Add Product</a></li>
+            </ul>
+        </aside>
+        <main class="main-content">
+            <header>
+                <h1>Dashboard</h1>
+                <input type="text" id="search" placeholder="Search products...">
+            </header>
+            <section class="products-grid" id="productsGrid">
+                <!-- Products loaded here -->
+            </section>
+        </main>
+    </div>
+
+    <!-- Product Modal -->
+    <div class="modal" id="productModal">
+        <div class="modal-content">
+            <span class="close">&times;</span>
+            <div id="modalBody"></div>
+        </div>
+    </div>
+
+    <!-- Add Product Form Modal -->
+    <div class="modal" id="addProductModal">
+        <div class="modal-content">
+            <span class="close">&times;</span>
+            <h2>Add New Product</h2>
+            <form id="addProductForm">
+                <input type="text" name="title" placeholder="Title" required>
+                <input type="text" name="price" placeholder="Price" required>
+                <input type="text" name="category" placeholder="Category" required>
+                <input type="text" name="image" placeholder="Image URL" required>
+                <textarea name="description" placeholder="Description" required></textarea>
+                <button type="submit">Add Product</button>
+            </form>
+            <p class="form-msg"></p>
+        </div>
+    </div>
+</body>
+</html>
