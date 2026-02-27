@@ -1,0 +1,162 @@
+[
+  {
+    "id": 1,
+    "title": "Complete JavaScript Mastery",
+    "description": "Learn JavaScript from basics to advanced concepts including ES6, async programming, and DOM manipulation.",
+    "price": 49,
+    "category": "Programming",
+    "image": "https://plus.unsplash.com/premium_photo-1661877737564-3dfd7282efcb?q=80&w=900&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+  },
+  {
+    "id": 2,
+    "title": "Advanced React Development",
+    "description": "Build modern web applications using React, hooks, context API, and performance optimization.",
+    "price": 59,
+    "category": "Programming",
+    "image": "https://plus.unsplash.com/premium_photo-1661877737564-3dfd7282efcb?q=80&w=900&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+  },
+  {
+    "id": 3,
+    "title": "Python for Data Science",
+    "description": "Master Python, NumPy, Pandas, and Matplotlib for data analysis and visualization.",
+    "price": 45,
+    "category": "Data Science",
+    "image": "https://plus.unsplash.com/premium_photo-1661877737564-3dfd7282efcb?q=80&w=900&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+  },
+  {
+    "id": 4,
+    "title": "Machine Learning A-Z",
+    "description": "Supervised and unsupervised learning, model evaluation, and real-world ML projects.",
+    "price": 69,
+    "category": "Data Science",
+    "image": "https://plus.unsplash.com/premium_photo-1661877737564-3dfd7282efcb?q=80&w=900&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+  },
+  {
+    "id": 5,
+    "title": "UI/UX Design Bootcamp",
+    "description": "Learn Figma, wireframing, user research, and design systems.",
+    "price": 39,
+    "category": "Design",
+    "image": "https://plus.unsplash.com/premium_photo-1661877737564-3dfd7282efcb?q=80&w=900&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+  },
+  {
+    "id": 6,
+    "title": "Graphic Design Fundamentals",
+    "description": "Typography, color theory, branding, and Adobe tools mastery.",
+    "price": 29,
+    "category": "Design",
+    "image": "https://plus.unsplash.com/premium_photo-1661877737564-3dfd7282efcb?q=80&w=900&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+  },
+  {
+    "id": 7,
+    "title": "Digital Marketing Pro",
+    "description": "SEO, social media marketing, Google Ads, and analytics.",
+    "price": 35,
+    "category": "Marketing",
+    "image": "https://plus.unsplash.com/premium_photo-1661877737564-3dfd7282efcb?q=80&w=900&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+  },
+  {
+    "id": 8,
+    "title": "Content Marketing Strategy",
+    "description": "Build content funnels, blogging strategy, and brand storytelling.",
+    "price": 32,
+    "category": "Marketing",
+    "image": "https://plus.unsplash.com/premium_photo-1661877737564-3dfd7282efcb?q=80&w=900&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+  },
+  {
+    "id": 9,
+    "title": "Business Analytics",
+    "description": "Data-driven decision making using Excel and Power BI.",
+    "price": 42,
+    "category": "Business",
+    "image": "https://plus.unsplash.com/premium_photo-1661877737564-3dfd7282efcb?q=80&w=900&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+  },
+  {
+    "id": 10,
+    "title": "Startup Entrepreneurship",
+    "description": "Idea validation, funding, business models, and scaling strategy.",
+    "price": 50,
+    "category": "Business",
+    "image": "https://plus.unsplash.com/premium_photo-1661877737564-3dfd7282efcb?q=80&w=900&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+  },
+    {
+    "id": 11,
+    "title": "Cybersecurity Fundamentals",
+    "description": "Network security, ethical hacking basics, and system protection.",
+    "price": 55,
+    "category": "Security",
+    "image": "https://plus.unsplash.com/premium_photo-1661877737564-3dfd7282efcb?q=80&w=900&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+  },
+  {
+    "id": 12,
+    "title": "Ethical Hacking Bootcamp",
+    "description": "Penetration testing, vulnerability assessment, and Kali Linux tools.",
+    "price": 75,
+    "category": "Security",
+    "image": "https://plus.unsplash.com/premium_photo-1661877737564-3dfd7282efcb?q=80&w=900&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+  },
+  {
+    "id": 13,
+    "title": "Android App Development",
+    "description": "Build Android apps using Java and Android Studio.",
+    "price": 48,
+    "category": "Programming",
+    "image": "https://plus.unsplash.com/premium_photo-1661877737564-3dfd7282efcb?q=80&w=900&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+  },
+  {
+    "id": 14,
+    "title": "iOS Development with Swift",
+    "description": "Develop iPhone apps using Swift and Xcode.",
+    "price": 52,
+    "category": "Programming",
+    "image": "https://plus.unsplash.com/premium_photo-1661877737564-3dfd7282efcb?q=80&w=900&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+  },
+  {
+    "id": 15,
+    "title": "Cloud Computing with AWS",
+    "description": "Learn EC2, S3, IAM, and cloud architecture design.",
+    "price": 65,
+    "category": "Cloud",
+    "image":"https://plus.unsplash.com/premium_photo-1661877737564-3dfd7282efcb?q=80&w=900&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+  },
+  {
+    "id": 16,
+    "title": "Microsoft Azure Fundamentals",
+    "description": "Understand Azure services and cloud deployment models.",
+    "price": 60,
+    "category": "Cloud",
+    "image": "https://plus.unsplash.com/premium_photo-1661877737564-3dfd7282efcb?q=80&w=900&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+  },
+  {
+    "id": 17,
+    "title": "DevOps Mastery",
+    "description": "CI/CD pipelines, Docker, Kubernetes, and automation.",
+    "price": 70,
+    "category": "DevOps",
+    "image": "https://plus.unsplash.com/premium_photo-1661877737564-3dfd7282efcb?q=80&w=900&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+  },
+  {
+    "id": 18,
+    "title": "Docker & Kubernetes",
+    "description": "Containerization and orchestration for scalable systems.",
+    "price": 58,
+    "category": "DevOps",
+    "image": "https://plus.unsplash.com/premium_photo-1661877737564-3dfd7282efcb?q=80&w=900&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+  },
+  {
+    "id": 19,
+    "title": "Excel Advanced Techniques",
+    "description": "Pivot tables, macros, and automation in Excel.",
+    "price": 27,
+    "category": "Business",
+    "image": "https://plus.unsplash.com/premium_photo-1661877737564-3dfd7282efcb?q=80&w=900&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+  },
+  {
+    "id": 20,
+    "title": "Artificial Intelligence Basics",
+    "description": "Introduction to AI concepts, neural networks, and deep learning.",
+    "price": 68,
+    "category": "Data Science",
+    "image": "https://plus.unsplash.com/premium_photo-1661877737564-3dfd7282efcb?q=80&w=900&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+  }
+]

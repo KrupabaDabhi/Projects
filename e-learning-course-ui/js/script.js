@@ -1,5 +1,5 @@
 $(document).ready(function() {
-    const apiUrl = "https://fakestoreapi.com/products";
+    const apiUrl = "courses.json";
     let courses = [];
 
     // Fetch courses from API
