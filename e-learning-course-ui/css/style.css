@@ -9,6 +9,79 @@
 body {
     background: #f9f9f9;
     padding: 20px;
+    margin: 0;
+    font-family: Arial, sans-serif;
+}
+
+/* NAVBAR */
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #1f3c88;
+    padding: 15px 40px;
+    color: white;
+}
+
+.logo {
+    font-size: 22px;
+    font-weight: bold;
+}
+
+.nav-links {
+    list-style: none;
+    display: flex;
+    gap: 25px;
+}
+
+.nav-links li a {
+    text-decoration: none;
+    color: white;
+    transition: 0.3s;
+}
+
+.nav-links li a:hover {
+    color: #ffd700;
+}
+
+.nav-actions button {
+    margin-left: 10px;
+    padding: 8px 15px;
+    border: none;
+    cursor: pointer;
+    border-radius: 4px;
+}
+
+.login-btn {
+    background: transparent;
+    border: 1px solid white;
+    color: white;
+}
+
+.signup-btn {
+    background: #ffd700;
+    color: black;
+}
+
+.hero {
+    text-align: center;
+    padding: 50px 20px;
+    background: #f4f6fb;
+}
+
+.hero h1 {
+    margin-bottom: 10px;
+}
+
+.filters {
+    margin-top: 20px;
+}
+
+.filters input,
+.filters select {
+    padding: 10px;
+    margin: 5px;
+    width: 220px;
 }
 
 header {
@@ -16,7 +89,8 @@ header {
     margin-bottom: 20px;
 }
 
-header input, header select {
+header input,
+header select {
     padding: 8px;
     margin: 10px 5px;
     width: 200px;
@@ -33,14 +107,17 @@ header input, header select {
 .course-card {
     background: #fff;
     border-radius: 8px;
-    box-shadow: 0 2px 5px rgba(0,0,0,0.2);
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
     padding: 10px;
     text-align: center;
-    transition: transform 0.2s;
+    transition: transform 0.3s ease;
+    cursor: pointer;
+    overflow: hidden;
 }
 
 .course-card:hover {
     transform: scale(1.05);
+    box-shadow: 0 8px 20px rgba(0,0,0,0.15);
 }
 
 .course-card img {
@@ -70,7 +147,7 @@ header input, header select {
     width: 100%;
     height: 100%;
     overflow: auto;
-    background-color: rgba(0,0,0,0.5);
+    background-color: rgba(0, 0, 0, 0.5);
 }
 
 .modal-content {
@@ -88,17 +165,34 @@ header input, header select {
     max-height: 200px;
     object-fit: cover;
     margin-bottom: 10px;
+    border-radius: 8px;
 }
 
 .close {
     position: absolute;
-    top: 10px;
+    top: 15px;
     right: 15px;
-    font-size: 24px;
+    width: 40px;
+    height: 40px;
+    background: white;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
     cursor: pointer;
+    color: #1f3c88;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.25);
+    transition: all 0.3s ease;
+    z-index: 10;
 }
 
-form input, form button {
+.close:hover {
+    background: #ffd700;
+    transform: rotate(90deg);
+}
+
+form input,
+form button {
     width: 100%;
     padding: 8px;
     margin: 5px 0;
@@ -115,4 +209,41 @@ form button {
     color: green;
     margin-top: 10px;
     display: none;
+}
+
+.footer {
+    background: #1f3c88;
+    color: white;
+    margin-top: 50px;
+}
+
+.footer-container {
+    display: flex;
+    justify-content: space-between;
+    padding: 40px;
+    flex-wrap: wrap;
+}
+
+.footer-section {
+    max-width: 300px;
+}
+
+.footer-section h4 {
+    margin-bottom: 10px;
+}
+
+.footer-section ul {
+    list-style: none;
+    padding: 0;
+}
+
+.footer-section ul li a {
+    text-decoration: none;
+    color: white;
+}
+
+.footer-bottom {
+    text-align: center;
+    padding: 15px;
+    background: #162d63;
 }

@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -8,13 +9,36 @@
     <!-- jQuery CDN -->
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
 </head>
+
 <body>
-    <header>
+
+    <nav class="navbar">
+        <div class="logo">EduCommerce</div>
+
+        <ul class="nav-links">
+            <li><a href="#">Home</a></li>
+            <li><a href="#">Courses</a></li>
+            <li><a href="#">Categories</a></li>
+            <li><a href="#">About</a></li>
+            <li><a href="#">Contact</a></li>
+        </ul>
+
+        <div class="nav-actions">
+            <button class="login-btn">Login</button>
+            <button class="signup-btn">Sign Up</button>
+        </div>
+    </nav>
+
+    <header class="hero">
         <h1>E-Learning Courses</h1>
-        <input type="text" id="search" placeholder="Search courses...">
-        <select id="categoryFilter">
-            <option value="all">All Categories</option>
-        </select>
+        <p>Upgrade your skills with industry-relevant courses</p>
+
+        <div class="filters">
+            <input type="text" id="search" placeholder="Search courses...">
+            <select id="categoryFilter">
+                <option value="all">All Categories</option>
+            </select>
+        </div>
     </header>
 
     <main>
@@ -26,12 +50,16 @@
     <!-- Modal -->
     <div id="courseModal" class="modal">
         <div class="modal-content">
-            <span class="close">&times;</span>
+            <span class="close" id="closeModal">
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M6 6L18 18M18 6L6 18" stroke="currentColor" stroke-width="2" stroke-linecap="round" />
+                </svg>
+            </span>
             <img id="modalImage" src="" alt="Course Image">
             <h2 id="modalTitle"></h2>
             <p id="modalDescription"></p>
             <p><strong>Price:</strong> $<span id="modalPrice"></span></p>
-            
+
             <h3>Enroll in this course</h3>
             <form id="enrollForm">
                 <input type="text" name="name" placeholder="Your Name" required>
@@ -43,6 +71,35 @@
         </div>
     </div>
 
+    <footer class="footer">
+        <div class="footer-container">
+            <div class="footer-section">
+                <h3>EduCommerce</h3>
+                <p>Your trusted platform for online learning and skill development.</p>
+            </div>
+
+            <div class="footer-section">
+                <h4>Quick Links</h4>
+                <ul>
+                    <li><a href="#">Home</a></li>
+                    <li><a href="#">Courses</a></li>
+                    <li><a href="#">Contact</a></li>
+                </ul>
+            </div>
+
+            <div class="footer-section">
+                <h4>Contact</h4>
+                <p>Email: support@educommerce.com</p>
+                <p>Phone: +91 9876543210</p>
+            </div>
+        </div>
+
+        <div class="footer-bottom">
+            <p>© 2026 EduCommerce. All Rights Reserved.</p>
+        </div>
+    </footer>
+
     <script src="js/script.js"></script>
 </body>
+
 </html>

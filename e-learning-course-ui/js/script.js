@@ -1,9 +1,9 @@
-$(document).ready(function() {
+$(document).ready(function () {
     const apiUrl = "courses.json";
     let courses = [];
 
     // Fetch courses from API
-    $.getJSON(apiUrl, function(data) {
+    $.getJSON(apiUrl, function (data) {
         courses = data;
         renderCourses(courses);
         populateCategories(courses);
@@ -14,11 +14,10 @@ $(document).ready(function() {
         $("#courseContainer").empty();
         courseList.forEach(course => {
             $("#courseContainer").append(`
-                <div class="course-card" data-category="${course.category}">
+                <div class="course-card" data-id="${course.id}" data-category="${course.category}">
                     <img src="${course.image}" alt="${course.title}">
                     <h3>${course.title}</h3>
                     <p>$${course.price}</p>
-                    <button class="viewDetails" data-id="${course.id}">View Details</button>
                 </div>
             `);
         });
@@ -33,7 +32,7 @@ $(document).ready(function() {
     }
 
     // Search & filter
-    $("#search, #categoryFilter").on("input change", function() {
+    $("#search, #categoryFilter").on("input change", function () {
         const searchText = $("#search").val().toLowerCase();
         const selectedCategory = $("#categoryFilter").val();
         const filtered = courses.filter(course => {
@@ -45,33 +44,34 @@ $(document).ready(function() {
     });
 
     // Open modal
-    $(document).on("click", ".viewDetails", function() {
+    $(document).on("click", ".course-card", function () {
+
         const id = $(this).data("id");
-        const course = courses.find(c => c.id == id);
+    const course = courses.find(c => c.id == id);
 
-        $("#modalImage").attr("src", course.image);
-        $("#modalTitle").text(course.title);
-        $("#modalDescription").text(course.description);
-        $("#modalPrice").text(course.price);
-        $("#courseName").val(course.title);
-        $("#enrollMessage").hide();
+    $("#modalImage").attr("src", course.image);
+    $("#modalTitle").text(course.title);
+    $("#modalDescription").text(course.description);
+    $("#modalPrice").text(course.price);
+    $("#courseName").val(course.title);
+    $("#enrollMessage").hide();
 
-        $("#courseModal").fadeIn();
+    $("#courseModal").fadeIn();
     });
 
     // Close modal
-    $(".close").click(function() {
+    $(".close").click(function () {
         $("#courseModal").fadeOut();
     });
 
-    $(window).click(function(event) {
+    $(window).click(function (event) {
         if ($(event.target).is("#courseModal")) {
             $("#courseModal").fadeOut();
         }
     });
 
     // Enrollment form AJAX
-    $("#enrollForm").submit(function(e) {
+    $("#enrollForm").submit(function (e) {
         e.preventDefault();
         const formData = $(this).serialize();
         console.log("Enrollment Data:", formData);
