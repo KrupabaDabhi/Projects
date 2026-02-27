@@ -1,7 +1,7 @@
 # E-Learning Course UI
 
 ## Project Overview
-The **E-Learning Course UI** is a dynamic web application that displays courses fetched from an API (`https://fakestoreapi.com/products`) in an interactive, responsive, and user-friendly interface. Users can search, filter, view details, and enroll in courses seamlessly. The project demonstrates modern front-end development practices using **HTML, CSS, JavaScript, and jQuery**, with **AJAX** for form submissions.
+The **E-Learning Course UI** is a dynamic web application that displays courses fetched from local JSON file in an interactive, responsive, and user-friendly interface. Users can search, filter, view details, and enroll in courses seamlessly. The project demonstrates modern front-end development practices using **HTML, CSS, JavaScript, and jQuery**, with **AJAX** for form submissions.
 
 ---
 
