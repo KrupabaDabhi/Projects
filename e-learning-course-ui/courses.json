@@ -5,7 +5,7 @@
     "description": "Learn JavaScript from basics to advanced concepts including ES6, async programming, and DOM manipulation.",
     "price": 49,
     "category": "Programming",
-    "image": "https://plus.unsplash.com/premium_photo-1661877737564-3dfd7282efcb?q=80&w=900&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+    "image": "https://placehold.co/400x240?text=JavaScript+Mastery"
   },
   {
     "id": 2,
@@ -13,7 +13,7 @@
     "description": "Build modern web applications using React, hooks, context API, and performance optimization.",
     "price": 59,
     "category": "Programming",
-    "image": "https://plus.unsplash.com/premium_photo-1661877737564-3dfd7282efcb?q=80&w=900&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+    "image": "https://placehold.co/400x240?text=React+Development"
   },
   {
     "id": 3,
@@ -21,7 +21,7 @@
     "description": "Master Python, NumPy, Pandas, and Matplotlib for data analysis and visualization.",
     "price": 45,
     "category": "Data Science",
-    "image": "https://plus.unsplash.com/premium_photo-1661877737564-3dfd7282efcb?q=80&w=900&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+    "image": "https://placehold.co/400x240?text=Python+Data+Science"
   },
   {
     "id": 4,
@@ -29,7 +29,7 @@
     "description": "Supervised and unsupervised learning, model evaluation, and real-world ML projects.",
     "price": 69,
     "category": "Data Science",
-    "image": "https://plus.unsplash.com/premium_photo-1661877737564-3dfd7282efcb?q=80&w=900&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+    "image": "https://placehold.co/400x240?text=Machine+Learning+A-Z"
   },
   {
     "id": 5,
@@ -37,7 +37,7 @@
     "description": "Learn Figma, wireframing, user research, and design systems.",
     "price": 39,
     "category": "Design",
-    "image": "https://plus.unsplash.com/premium_photo-1661877737564-3dfd7282efcb?q=80&w=900&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+    "image": "https://placehold.co/400x240?text=UI%2FUX+Design"
   },
   {
     "id": 6,
@@ -45,7 +45,7 @@
     "description": "Typography, color theory, branding, and Adobe tools mastery.",
     "price": 29,
     "category": "Design",
-    "image": "https://plus.unsplash.com/premium_photo-1661877737564-3dfd7282efcb?q=80&w=900&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+    "image": "https://placehold.co/400x240?text=Graphic+Design"
   },
   {
     "id": 7,
@@ -53,7 +53,7 @@
     "description": "SEO, social media marketing, Google Ads, and analytics.",
     "price": 35,
     "category": "Marketing",
-    "image": "https://plus.unsplash.com/premium_photo-1661877737564-3dfd7282efcb?q=80&w=900&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+    "image": "https://placehold.co/400x240?text=Digital+Marketing"
   },
   {
     "id": 8,
@@ -61,7 +61,7 @@
     "description": "Build content funnels, blogging strategy, and brand storytelling.",
     "price": 32,
     "category": "Marketing",
-    "image": "https://plus.unsplash.com/premium_photo-1661877737564-3dfd7282efcb?q=80&w=900&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+    "image": "https://placehold.co/400x240?text=Content+Marketing"
   },
   {
     "id": 9,
@@ -69,7 +69,7 @@
     "description": "Data-driven decision making using Excel and Power BI.",
     "price": 42,
     "category": "Business",
-    "image": "https://plus.unsplash.com/premium_photo-1661877737564-3dfd7282efcb?q=80&w=900&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+    "image": "https://placehold.co/400x240?text=Business+Analytics"
   },
   {
     "id": 10,
@@ -77,15 +77,15 @@
     "description": "Idea validation, funding, business models, and scaling strategy.",
     "price": 50,
     "category": "Business",
-    "image": "https://plus.unsplash.com/premium_photo-1661877737564-3dfd7282efcb?q=80&w=900&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+    "image": "https://placehold.co/400x240?text=Startup+Entrepreneurship"
   },
-    {
+  {
     "id": 11,
     "title": "Cybersecurity Fundamentals",
     "description": "Network security, ethical hacking basics, and system protection.",
     "price": 55,
     "category": "Security",
-    "image": "https://plus.unsplash.com/premium_photo-1661877737564-3dfd7282efcb?q=80&w=900&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+    "image": "https://placehold.co/400x240?text=Cybersecurity"
   },
   {
     "id": 12,
@@ -93,7 +93,7 @@
     "description": "Penetration testing, vulnerability assessment, and Kali Linux tools.",
     "price": 75,
     "category": "Security",
-    "image": "https://plus.unsplash.com/premium_photo-1661877737564-3dfd7282efcb?q=80&w=900&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+    "image": "https://placehold.co/400x240?text=Ethical+Hacking"
   },
   {
     "id": 13,
@@ -101,7 +101,7 @@
     "description": "Build Android apps using Java and Android Studio.",
     "price": 48,
     "category": "Programming",
-    "image": "https://plus.unsplash.com/premium_photo-1661877737564-3dfd7282efcb?q=80&w=900&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+    "image": "https://placehold.co/400x240?text=Android+Development"
   },
   {
     "id": 14,
@@ -109,7 +109,7 @@
     "description": "Develop iPhone apps using Swift and Xcode.",
     "price": 52,
     "category": "Programming",
-    "image": "https://plus.unsplash.com/premium_photo-1661877737564-3dfd7282efcb?q=80&w=900&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+    "image": "https://placehold.co/400x240?text=iOS+Swift"
   },
   {
     "id": 15,
@@ -117,7 +117,7 @@
     "description": "Learn EC2, S3, IAM, and cloud architecture design.",
     "price": 65,
     "category": "Cloud",
-    "image":"https://plus.unsplash.com/premium_photo-1661877737564-3dfd7282efcb?q=80&w=900&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+    "image": "https://placehold.co/400x240?text=AWS+Cloud"
   },
   {
     "id": 16,
@@ -125,7 +125,7 @@
     "description": "Understand Azure services and cloud deployment models.",
     "price": 60,
     "category": "Cloud",
-    "image": "https://plus.unsplash.com/premium_photo-1661877737564-3dfd7282efcb?q=80&w=900&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+    "image": "https://placehold.co/400x240?text=Azure+Fundamentals"
   },
   {
     "id": 17,
@@ -133,7 +133,7 @@
     "description": "CI/CD pipelines, Docker, Kubernetes, and automation.",
     "price": 70,
     "category": "DevOps",
-    "image": "https://plus.unsplash.com/premium_photo-1661877737564-3dfd7282efcb?q=80&w=900&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+    "image": "https://placehold.co/400x240?text=DevOps+Mastery"
   },
   {
     "id": 18,
@@ -141,7 +141,7 @@
     "description": "Containerization and orchestration for scalable systems.",
     "price": 58,
     "category": "DevOps",
-    "image": "https://plus.unsplash.com/premium_photo-1661877737564-3dfd7282efcb?q=80&w=900&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+    "image": "https://placehold.co/400x240?text=Docker+Kubernetes"
   },
   {
     "id": 19,
@@ -149,7 +149,7 @@
     "description": "Pivot tables, macros, and automation in Excel.",
     "price": 27,
     "category": "Business",
-    "image": "https://plus.unsplash.com/premium_photo-1661877737564-3dfd7282efcb?q=80&w=900&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+    "image": "https://placehold.co/400x240?text=Excel+Advanced"
   },
   {
     "id": 20,
@@ -157,6 +157,6 @@
     "description": "Introduction to AI concepts, neural networks, and deep learning.",
     "price": 68,
     "category": "Data Science",
-    "image": "https://plus.unsplash.com/premium_photo-1661877737564-3dfd7282efcb?q=80&w=900&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+    "image": "https://placehold.co/400x240?text=AI+Basics"
   }
 ]

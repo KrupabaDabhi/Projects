@@ -22,7 +22,7 @@ function initFilters() {
 }
 
 /**
- * Apply filter to tasks
+ * Apply the current filter to a tasks array.
  * @param {Array} tasks
  * @returns {Array}
  */
@@ -35,5 +35,5 @@ function getFilteredTasks(tasks) {
         return tasks.filter(task => task.completed);
     }
 
-    return tasks; // all
+    return tasks; // "all"
 }
