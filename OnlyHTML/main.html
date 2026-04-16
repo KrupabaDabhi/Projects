@@ -2,13 +2,13 @@
 <html>
 
 <head>
-    <title>Job Application Portal - KriitasLeadership </title>
+    <title>Job Application Portal - KriitasLeadership Pvt. Ltd.</title>
 </head>
 
 <body bgcolor="#f2f2f2">
 
     <!-- ================= MAIN OUTER TABLE ================= -->
-    <table width="100%" border="0" cellpadding="10">
+    <table id="top" width="100%" border="0" cellpadding="10">
 
         <!-- ================= HEADER SECTION ================= -->
         <tr bgcolor="#1f3c88">
@@ -45,6 +45,7 @@
                 </p>
             </td>
         </tr>
+
         <!-- ================= OPEN POSITIONS ================= -->
         <tr bgcolor="#e8eef7">
             <td>
@@ -60,9 +61,9 @@
                 <b>Hiring Process:</b>
                 <ol>
                     <li>Application Submission</li>
-                    <li>Aptitude & Leadership Assessment</li>
+                    <li>Aptitude &amp; Leadership Assessment</li>
                     <li>Panel Interaction with Senior Consultants</li>
-                    <li>Final Selection & Offer Letter</li>
+                    <li>Final Selection &amp; Offer Letter</li>
                 </ol>
             </td>
         </tr>
@@ -74,52 +75,38 @@
 
                 <table border="1" cellpadding="8" cellspacing="0" width="100%">
                     <tr bgcolor="#1f3c88" align="center">
-                        <th>
-                            <font color="white">Job Title</font>
-                        </th>
-                        <th>
-                            <font color="white">Department</font>
-                        </th>
-                        <th>
-                            <font color="white">Experience</font>
-                        </th>
-                        <th>
-                            <font color="white">Salary</font>
-                        </th>
-                        <th>
-                            <font color="white">Location</font>
-                        </th>
+                        <th><font color="white">Job Title</font></th>
+                        <th><font color="white">Department</font></th>
+                        <th><font color="white">Experience</font></th>
+                        <th><font color="white">Salary</font></th>
+                        <th><font color="white">Location</font></th>
                     </tr>
-
                     <tr align="center">
                         <td>Leadership Associate Trainee</td>
                         <td>Leadership Development</td>
                         <td>0-2 Years</td>
-                        <td>₹3-5 LPA</td>
+                        <td>&#8377;3-5 LPA</td>
                         <td>Ahmedabad</td>
                     </tr>
-
                     <tr align="center">
                         <td>Executive Coaching Intern</td>
                         <td>Executive Coaching</td>
                         <td>Freshers / MBA Graduates</td>
-                        <td>₹2-3 LPA (Stipend Based)</td>
+                        <td>&#8377;2-3 LPA (Stipend Based)</td>
                         <td>Hybrid</td>
                     </tr>
-
                     <tr align="center">
                         <td>Corporate Training Coordinator</td>
                         <td>Corporate Training</td>
                         <td>1-3 Years</td>
-                        <td>₹4-6 LPA</td>
+                        <td>&#8377;4-6 LPA</td>
                         <td>Mumbai</td>
                     </tr>
-
                     <tr align="center">
                         <td>Organizational Development Executive</td>
                         <td>Organizational Strategy</td>
                         <td>2-4 Years</td>
-                        <td>₹6-8 LPA</td>
+                        <td>&#8377;6-8 LPA</td>
                         <td>Bangalore</td>
                     </tr>
                 </table>
@@ -137,59 +124,59 @@
                     <fieldset>
                         <legend><b>Personal Information</b></legend>
 
-                        Full Name: <input type="text" required><br><br>
-                        Create Password: <input type="password" required><br><br>
-                        Email Address: <input type="email" required><br><br>
-                        Contact Number: <input type="tel" pattern="[0-9]{10}" placeholder="10 digits"><br><br>
-                        Date of Birth: <input type="date"><br><br>
+                        Full Name: <input type="text" name="fullname" required><br><br>
+                        Create Password: <input type="password" name="password" required><br><br>
+                        Email Address: <input type="email" name="email" required><br><br>
+                        Contact Number: <input type="tel" name="phone" pattern="[0-9]{10}" placeholder="10 digits"><br><br>
+                        Date of Birth: <input type="date" name="dob"><br><br>
 
                         Gender:
-                        <input type="radio" name="gender" checked> Male
-                        <input type="radio" name="gender"> Female
+                        <input type="radio" name="gender" value="male" checked> Male
+                        <input type="radio" name="gender" value="female"> Female
                         <br><br>
 
-                        Upload Resume / CV: <input type="file"><br><br>
+                        Upload Resume / CV: <input type="file" name="resume"><br><br>
                     </fieldset>
 
                     <br>
 
                     <!-- Professional Info -->
                     <fieldset>
-                        <legend><b>Professional & Leadership Details</b></legend>
+                        <legend><b>Professional &amp; Leadership Details</b></legend>
 
-                        Years of Experience: <input type="number" min="0" max="20"><br><br>
+                        Years of Experience: <input type="number" name="experience" min="0" max="20"><br><br>
 
                         Core Strengths:
-                        <input type="checkbox"> Communication
-                        <input type="checkbox"> Team Leadership
-                        <input type="checkbox"> Strategic Thinking
+                        <input type="checkbox" name="strength" value="communication"> Communication
+                        <input type="checkbox" name="strength" value="team-leadership"> Team Leadership
+                        <input type="checkbox" name="strength" value="strategic-thinking"> Strategic Thinking
                         <br><br>
 
                         Preferred Role:
-                        <select>
+                        <select name="role">
                             <optgroup label="Leadership Programs">
-                                <option>Leadership Associate Trainee</option>
-                                <option>Executive Coaching Intern</option>
+                                <option value="leadership-associate">Leadership Associate Trainee</option>
+                                <option value="executive-coaching">Executive Coaching Intern</option>
                             </optgroup>
                             <optgroup label="Corporate Services">
-                                <option>Corporate Training Coordinator</option>
-                                <option>Organizational Development Executive</option>
+                                <option value="training-coordinator">Corporate Training Coordinator</option>
+                                <option value="od-executive">Organizational Development Executive</option>
                             </optgroup>
                         </select>
                         <br><br>
 
                         Expected Annual CTC:
-                        <input type="range" min="300000" max="1500000"><br><br>
+                        <input type="range" name="expectedCtc" min="300000" max="1500000"><br><br>
 
-                        Available Start Date: <input type="date"><br><br>
-                        Preferred Interview Time: <input type="time"><br><br>
+                        Available Start Date: <input type="date" name="startDate"><br><br>
+                        Preferred Interview Time: <input type="time" name="interviewTime"><br><br>
 
-                        LinkedIn / Portfolio Profile: <input type="url" placeholder="https://"><br><br>
-                        Search Preferred Domain: <input type="search"><br><br>
+                        LinkedIn / Portfolio Profile: <input type="url" name="portfolio" placeholder="https://"><br><br>
+                        Search Preferred Domain: <input type="search" name="domain"><br><br>
 
-                        Select Preferred Theme Color: <input type="color"><br><br>
+                        Select Preferred Theme Color: <input type="color" name="themeColor"><br><br>
 
-                        <input type="hidden" value="KL2026APP">hidden type here
+                        <input type="hidden" name="applicationId" value="KL2026APP">
                     </fieldset>
 
                     <br>
@@ -199,9 +186,9 @@
                         <legend><b>Additional Information</b></legend>
 
                         Residential Address:<br>
-                        <textarea rows="4" cols="50"></textarea><br><br>
+                        <textarea name="address" rows="4" cols="50"></textarea><br><br>
 
-                        <input type="checkbox" required> I hereby declare that the information provided is
+                        <input type="checkbox" name="declaration" required> I hereby declare that the information provided is
                         accurate.<br><br>
 
                         <input type="submit" value="Submit Application">
@@ -229,7 +216,7 @@
         <tr bgcolor="#333333">
             <td align="center">
                 <font color="white">
-                    <small>© 2026 KriitasLeadership Pvt. Ltd. | Empowering Future Leaders.</small>
+                    <small>&copy; 2026 KriitasLeadership Pvt. Ltd. | Empowering Future Leaders.</small>
                 </font>
             </td>
         </tr>

@@ -2,49 +2,54 @@
 <html>
 
 <head>
-    <title>Job Application Portal - KriitasLeadership </title>
+    <title>Job Application Portal - KriitasLeadership Pvt. Ltd.</title>
+    <style>
+        @keyframes ticker {
+            0%   { transform: translateX(100%); }
+            100% { transform: translateX(-100%); }
+        }
+        .ticker-wrap { background-color:#163172; padding:8px; overflow:hidden; }
+        .ticker-text  { display:inline-block; white-space:nowrap; animation: ticker 16s linear infinite; }
+    </style>
 </head>
 
 <body style="margin:0; font-family: Arial, sans-serif; background-color:#f2f2f2;">
 
     <!-- HEADER SECTION -->
     <div id="top" style="background-color:#1f3c88; color:white; padding:20px; text-align:center;">
-        <img src="https://via.placeholder.com/100" alt="Company Logo" width="100" height="100"
-            style="display:block; margin:auto;">
-        <h1 style="margin:10px 0;">KriitasLeadership  Pvt. Ltd.</h1>
+        <img src="https://placehold.co/100x100?text=KL" alt="Company Logo" width="100" height="100"
+            style="display:block; margin:auto; border-radius:50%;">
+        <h1 style="margin:10px 0;">KriitasLeadership Pvt. Ltd.</h1>
         <p><i>Lead By Example</i></p>
-        <marquee behavior="scroll" direction="left" scrollamount="6" style="background-color:#163172; padding:8px;">
-            Now Hiring - 2026 Recruitment Drive Open
-        </marquee>
+        <div class="ticker-wrap">
+            <span class="ticker-text">Now Hiring &mdash; 2026 Recruitment Drive Open &nbsp;&nbsp;&nbsp;&nbsp; Now Hiring &mdash; 2026 Recruitment Drive Open</span>
+        </div>
     </div>
 
     <!-- ABOUT SECTION -->
     <div style="background-color:#ffffff; padding:20px; margin:20px;">
         <h2 style="color:#1f3c88;">About the Company</h2>
         <p>
-            <b>KriitasLeadership </b> was established in 2015 and has grown 10<sup>2</sup> times in the last decade.
+            <b>KriitasLeadership</b> was established in 2015 and has grown 10<sup>2</sup> times in the last decade.
             We believe in <mark>innovation</mark>, <u>leadership</u>, and <i>continuous growth</i>.
             Our research team works with advanced technologies like AI, IoT and Cloud computing.
         </p>
-
         <p>
             Our formula for success is simple: Hard Work + Smart Thinking = H<sub>2</sub>O level clarity in execution.
-            <span style="color:green; display:inline;">We focus on quality</span> and
-            <span style="color:blue; display:inline;">team collaboration</span>.
+            <span style="color:green;">We focus on quality</span> and
+            <span style="color:blue;">team collaboration</span>.
         </p>
     </div>
 
     <!-- OPEN POSITIONS -->
     <div style="background-color:#e8eef7; padding:20px; margin:20px;">
         <h2 style="color:#1f3c88;">Current Open Positions</h2>
-
         <ul>
             <li>Software Developer</li>
             <li>Web Designer</li>
             <li>Data Analyst</li>
             <li>HR Executive</li>
         </ul>
-
         <h3>Hiring Process</h3>
         <ol>
             <li>Application Submission</li>
@@ -57,75 +62,64 @@
     <!-- JOB DETAILS TABLE -->
     <div style="background-color:#ffffff; padding:20px; margin:20px;">
         <h2 style="color:#1f3c88;">Job Details</h2>
-
         <table border="1" cellpadding="10" cellspacing="0" width="100%">
-            <tr bgcolor="#1f3c88" style="color:white;">
+            <tr style="background-color:#1f3c88; color:white;">
                 <th>Job Title</th>
                 <th>Department</th>
                 <th>Experience</th>
                 <th>Salary Range</th>
                 <th>Location</th>
             </tr>
-
             <tr align="center">
                 <td>Software Developer</td>
                 <td>IT</td>
                 <td>2-4 Years</td>
-                <td>₹5-8 LPA</td>
+                <td>&#8377;5-8 LPA</td>
                 <td>Ahmedabad</td>
             </tr>
-
             <tr align="center">
                 <td>Web Designer</td>
                 <td>Design</td>
                 <td>1-3 Years</td>
-                <td>₹4-6 LPA</td>
+                <td>&#8377;4-6 LPA</td>
                 <td>Remote</td>
             </tr>
-
             <tr align="center">
                 <td>Data Analyst</td>
                 <td>Analytics</td>
                 <td>2-5 Years</td>
-                <td>₹6-9 LPA</td>
+                <td>&#8377;6-9 LPA</td>
                 <td>Mumbai</td>
             </tr>
-
             <tr align="center">
                 <td>HR Executive</td>
                 <td>HR</td>
                 <td>0 Years (freshers allowed)</td>
-                <td>₹2-3 LPA</td>
+                <td>&#8377;2-3 LPA</td>
                 <td>Ahmedabad</td>
             </tr>
-
         </table>
     </div>
 
     <!-- APPLICATION FORM -->
-    <div id="formSection" style="background-color:#e8eef7; padding:20px; margin:20px; color:black">
+    <div id="formSection" style="background-color:#e8eef7; padding:20px; margin:20px; color:black;">
         <h2 id="heading" style="color:#1f3c88;">Job Application Form</h2>
 
-        Change Form Background Color:
-        <input type="color" id="themeColor" onchange="changeFormColor()"><br><br>
+        <label for="themeColor">Change Form Background Color:</label>
+        <input type="color" id="themeColor" value="#e8eef7"><br><br>
 
-        Change Form text Color:
-        <input type="color" id="textColor" onchange="changetextColor()"><br><br>
+        <label for="textColor">Change Form Text Color:</label>
+        <input type="color" id="textColor" value="#000000"><br><br>
 
         <form action="#" method="post">
 
-            <fieldset id="" style="margin-bottom:15px; border:2px solid #1f3c88">
+            <fieldset style="margin-bottom:15px; border:2px solid #1f3c88;">
                 <legend><b>Personal Information</b></legend>
 
                 Full Name: <input type="text" name="fullname" placeholder="Enter full name" required><br><br>
-
                 Password: <input type="password" name="password" required><br><br>
-
                 Email: <input type="email" name="email" placeholder="example@email.com" required><br><br>
-
-                Phone: <input type="tel" name="phone" pattern="[0-9]{10}" placeholder="10 digit number"
-                    required><br><br>
-
+                Phone: <input type="tel" name="phone" pattern="[0-9]{10}" placeholder="10 digit number" required><br><br>
                 Date of Birth: <input type="date" name="dob"><br><br>
 
                 Gender:
@@ -136,7 +130,7 @@
                 Upload Resume: <input type="file" name="resume"><br><br>
             </fieldset>
 
-            <fieldset style="margin-bottom:15px; border:2px solid #1f3c88">
+            <fieldset style="margin-bottom:15px; border:2px solid #1f3c88;">
                 <legend><b>Professional Details</b></legend>
 
                 Years of Experience:
@@ -151,42 +145,44 @@
                 Preferred Job Role:
                 <select name="role">
                     <optgroup label="Technical">
-                        <option>Software Developer</option>
-                        <option>Web Designer</option>
-                        <option>Data Analyst</option>
-
+                        <option value="software-developer">Software Developer</option>
+                        <option value="web-designer">Web Designer</option>
+                        <option value="data-analyst">Data Analyst</option>
                     </optgroup>
                     <optgroup label="Non-Technical">
-                        <option>HR Executive</option>
+                        <option value="hr-executive">HR Executive</option>
                     </optgroup>
                 </select>
                 <br><br>
 
-                Expected Salary:
-                <input type="range" min="300000" max="1500000"><br><br>
+                Expected Salary (&#8377;):
+                <input type="range" name="salary" id="salaryRange" min="300000" max="1500000" step="50000"
+                    oninput="document.getElementById('salaryDisplay').textContent = '&#8377;' + Number(this.value).toLocaleString('en-IN')">
+                <span id="salaryDisplay" style="margin-left:8px; font-weight:bold;">&#8377;3,00,000</span>
+                <br><br>
 
                 Available Start Date:
-                <input type="date"><br><br>
+                <input type="date" name="startDate"><br><br>
 
                 Preferred Interview Time:
-                <input type="time"><br><br>
+                <input type="time" name="interviewTime"><br><br>
 
                 Portfolio Website:
-                <input type="url" placeholder="https://"><br><br>
+                <input type="url" name="portfolio" placeholder="https://"><br><br>
 
                 Search Position:
-                <input type="search" placeholder="Search job"><br><br>
+                <input type="search" name="searchPosition" placeholder="Search job"><br><br>
 
-                <input type="hidden" value="APP12345">
+                <input type="hidden" name="applicationId" value="APP12345">
             </fieldset>
 
-            <fieldset>
-                <legend style="margin-bottom:15px; border:2px solid #1f3c88"><b>Additional Information</b></legend>
+            <fieldset style="border:2px solid #1f3c88;">
+                <legend><b>Additional Information</b></legend>
 
                 Address:<br>
-                <textarea rows="4" cols="50"></textarea><br><br>
+                <textarea name="address" rows="4" cols="50"></textarea><br><br>
 
-                <input type="checkbox" required> I declare that the above information is true.<br><br>
+                <input type="checkbox" name="declaration" required> I declare that the above information is true.<br><br>
 
                 <input type="submit" value="Submit Application">
                 <input type="reset" value="Reset Form">
@@ -198,7 +194,6 @@
     <!-- CONTACT SECTION -->
     <div style="background-color:#ffffff; padding:20px; margin:20px;">
         <h2 style="color:#1f3c88;">Contact Us</h2>
-
         <p>Email: <a href="mailto:hr@KriitasLeadership.com">hr@KriitasLeadership.com</a></p>
         <p>Website: <a href="https://www.example.com" target="_blank">Visit Company Website</a></p>
         <p>Phone: +91 9876543210</p>
@@ -207,33 +202,36 @@
 
     <!-- FOOTER -->
     <div style="background-color:#333333; color:white; text-align:center; padding:10px;">
-        <small>© 2026 KriitasLeadership  Pvt. Ltd. All Rights Reserved.</small>
+        <small>&copy; 2026 KriitasLeadership Pvt. Ltd. All Rights Reserved.</small>
     </div>
 
-
-
-    <!-- JAVASCRIPT TO CHANGE THE FORM BACKROUND AS PER UER INPUT -->
+    <!-- JAVASCRIPT: form background and text colour pickers -->
     <script>
-        function changeFormColor() {
-            var selectedColor = document.getElementById("themeColor").value;
-            document.getElementById("formSection").style.backgroundColor = selectedColor;
-        }
-    </script>
+        document.getElementById("themeColor").addEventListener("change", function () {
+            var formBgColor = this.value;
+            document.getElementById("formSection").style.backgroundColor = formBgColor;
+        });
 
+        document.getElementById("textColor").addEventListener("change", function () {
+            var formTextColor = this.value;
+            var formSection   = document.getElementById("formSection");
 
-    <script>
-        function changetextColor() {
-            var selectedColor = document.getElementById("textColor").value;
-            document.getElementById("formSection").style.color = selectedColor;
-            document.getElementById("heading").style.color = selectedColor;
+            // Section text and heading
+            formSection.style.color                            = formTextColor;
+            document.getElementById("heading").style.color    = formTextColor;
 
-
-            var fieldsets = document.getElementsByTagName("fieldset");
+            // Fieldset borders
+            var fieldsets = formSection.getElementsByTagName("fieldset");
             for (var i = 0; i < fieldsets.length; i++) {
-                fieldsets[i].style.borderColor = selectedColor;
+                fieldsets[i].style.borderColor = formTextColor;
             }
 
-        }
+            // Input / select / textarea text colour
+            var inputs = formSection.querySelectorAll("input, select, textarea");
+            for (var j = 0; j < inputs.length; j++) {
+                inputs[j].style.color = formTextColor;
+            }
+        });
     </script>
 
 </body>

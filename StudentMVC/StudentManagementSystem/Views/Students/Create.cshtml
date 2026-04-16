@@ -1,19 +1,40 @@
 @model StudentManagementSystem.Models.Student
 
-<h2>Add Student</h2>
+@{
+    ViewData["Title"] = "Add Student";
+}
 
-<form asp-action="Create" method="post">
-    <label>Name</label><br />
-    <input asp-for="Name" /><br /><br />
+<h2 class="mb-4">Add Student</h2>
 
-    <label>Email</label><br />
-    <input asp-for="Email" /><br /><br />
+<div style="max-width:480px;">
+    <form asp-action="Create" method="post">
+        <div class="mb-3">
+            <label asp-for="Name" class="form-label"></label>
+            <input asp-for="Name" class="form-control" placeholder="Full name" />
+            <span asp-validation-for="Name" class="text-danger small"></span>
+        </div>
+        <div class="mb-3">
+            <label asp-for="Email" class="form-label"></label>
+            <input asp-for="Email" class="form-control" placeholder="email@example.com" />
+            <span asp-validation-for="Email" class="text-danger small"></span>
+        </div>
+        <div class="mb-3">
+            <label asp-for="Course" class="form-label"></label>
+            <input asp-for="Course" class="form-control" placeholder="e.g. Computer Science" />
+            <span asp-validation-for="Course" class="text-danger small"></span>
+        </div>
+        <div class="mb-3">
+            <label asp-for="EnrollmentDate" class="form-label"></label>
+            <input asp-for="EnrollmentDate" class="form-control" type="date" />
+            <span asp-validation-for="EnrollmentDate" class="text-danger small"></span>
+        </div>
+        <div class="d-flex gap-2">
+            <button type="submit" class="btn btn-primary">Save</button>
+            <a asp-action="Index" class="btn btn-outline-secondary">Cancel</a>
+        </div>
+    </form>
+</div>
 
-    <label>Course</label><br />
-    <input asp-for="Course" /><br /><br />
-
-    <label>Enrollment Date</label><br />
-    <input asp-for="EnrollmentDate" type="date" /><br /><br />
-
-    <button type="submit">Save</button>
-</form>
+@section Scripts {
+    @{ await Html.RenderPartialAsync("_ValidationScriptsPartial"); }
+}

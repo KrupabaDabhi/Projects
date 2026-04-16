@@ -1,14 +1,11 @@
 using Microsoft.AspNetCore.Mvc;
+using Microsoft.EntityFrameworkCore;
 using StudentManagementSystem.Models;
-using System;
-using System.Collections.Generic;
-using System.Linq;
 
 namespace StudentManagementSystem.Controllers
 {
     public class StudentsController : Controller
     {
-        //  DATA
         private readonly ApplicationDbContext _context;
 
         public StudentsController(ApplicationDbContext context)
@@ -16,22 +13,22 @@ namespace StudentManagementSystem.Controllers
             _context = context;
         }
 
-
         // READ: List
-        public IActionResult Index()
+        public async Task<IActionResult> Index()
         {
-            var students = _context.Students.ToList();
+            var students = await _context.Students.ToListAsync();
             return View(students);
         }
 
-
         // READ: Details
-        public IActionResult Details(int id)
+        public async Task<IActionResult> Details(int id)
         {
-            var student = _context.Students.FirstOrDefault(s => s.StudentId == id);
+            var student = await _context.Students.FirstOrDefaultAsync(s => s.StudentId == id);
+            if (student == null)
+                return NotFound();
+
             return View(student);
         }
-
 
         // CREATE: Form
         public IActionResult Create()
@@ -41,38 +38,67 @@ namespace StudentManagementSystem.Controllers
 
         // CREATE: Submit
         [HttpPost]
-        public IActionResult Create(Student student)
+        [ValidateAntiForgeryToken]
+        public async Task<IActionResult> Create(Student student)
         {
             if (ModelState.IsValid)
             {
                 _context.Students.Add(student);
-                _context.SaveChanges();
+                await _context.SaveChangesAsync();
+                TempData["Success"] = "Student added successfully.";
                 return RedirectToAction("Index");
             }
             return View(student);
         }
 
-
         // UPDATE: Form
-        public IActionResult Edit(int id)
+        public async Task<IActionResult> Edit(int id)
         {
-            var student = _context.Students.Find(id);
+            var student = await _context.Students.FindAsync(id);
+            if (student == null)
+                return NotFound();
+
             return View(student);
         }
 
-
         // UPDATE: Submit
         [HttpPost]
-        public IActionResult Edit(Student student)
+        [ValidateAntiForgeryToken]
+        public async Task<IActionResult> Edit(Student student)
         {
             if (ModelState.IsValid)
             {
                 _context.Students.Update(student);
-                _context.SaveChanges();
+                await _context.SaveChangesAsync();
+                TempData["Success"] = "Student updated successfully.";
                 return RedirectToAction("Index");
             }
             return View(student);
         }
 
+        // DELETE: Confirm
+        public async Task<IActionResult> Delete(int id)
+        {
+            var student = await _context.Students.FirstOrDefaultAsync(s => s.StudentId == id);
+            if (student == null)
+                return NotFound();
+
+            return View(student);
+        }
+
+        // DELETE: Submit
+        [HttpPost, ActionName("Delete")]
+        [ValidateAntiForgeryToken]
+        public async Task<IActionResult> DeleteConfirmed(int id)
+        {
+            var student = await _context.Students.FindAsync(id);
+            if (student != null)
+            {
+                _context.Students.Remove(student);
+                await _context.SaveChangesAsync();
+                TempData["Success"] = "Student deleted successfully.";
+            }
+            return RedirectToAction("Index");
+        }
     }
 }
