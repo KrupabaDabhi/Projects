@@ -1,0 +1,228 @@
+% ============================================================
+% TITLE PAGE 1
+% ============================================================
+\thispagestyle{empty}
+\begin{center}
+{\huge \textbf{Multi-Organ Abdominal CT Segmentation using Attention U-Net}}\\[6pt]
+
+\vspace{2.5cm}
+
+Submitted By\\
+{\large \bf Krupaba Dabhi} \\
+{\bf 22BCE158} \\
+\vspace{2.5cm}
+
+\begin{figure}[h]
+\begin{center}
+  \includegraphics[scale=0.9]{Logo.jpg}\\
+\end{center}
+\end{figure}
+
+\vspace{0.3cm}
+{\bf DEPARTMENT OF COMPUTER SCIENCE AND ENGINEERING}\\
+{\bf INSTITUTE OF TECHNOLOGY}\\
+{\bf NIRMA UNIVERSITY}\\
+{\bf AHMEDABAD--382481}\\[0.4cm]
+{\bf April 2026}
+\end{center}
+
+% ============================================================
+% TITLE PAGE 2
+% ============================================================
+\newpage
+\thispagestyle{empty}
+\begin{center}
+
+{\huge \textbf{Multi-Organ Abdominal CT Segmentation using Attention U-Net}}\\[6pt]
+
+\vspace{1cm}
+{\large \bf Project Report}\\
+\vspace{0.5cm}
+
+{
+Submitted in partial fulfillment of the requirements\\
+\vspace{0.3cm}
+for the degree of\\
+\vspace{0.3cm}
+\bf Bachelor of Technology in Computer Science and Engineering\\
+}
+\vspace{0.3cm} By\\
+{\large \bf Krupaba Dabhi} \\
+{\bf (22BCE158)} \\
+\vspace{0.4cm}
+
+Guided By \\
+{{\large\bf Dr Rupal Kapdi}} \\
+\bf DEPARTMENT OF COMPUTER SCIENCE AND ENGINEERING\\
+\vspace{1.2cm}
+
+\includegraphics[scale=0.75]{Logo.jpg}\\[0.4cm]
+
+{\bf DEPARTMENT OF COMPUTER SCIENCE AND ENGINEERING}\\
+{\bf INSTITUTE OF TECHNOLOGY}\\
+{\bf NIRMA UNIVERSITY}\\
+{\bf AHMEDABAD--382481}\\[0.3cm]
+{\bf April 2026}
+
+\end{center}
+
+% ============================================================
+% CERTIFICATE
+% ============================================================
+\newpage
+\thispagestyle{empty}
+\addcontentsline{toc}{chapter}{Certificate}\index{Certificate}
+\begin{center}
+  \includegraphics[scale=0.8]{Logo.jpg}\\[0.5cm]
+  {\Large \bf Certificate}\\
+\end{center}
+\vspace{10pt}
+
+\noindent
+This is to certify that the major project entitled
+\textbf{``Multi-Organ Abdominal CT Segmentation using Attention U-Net''} submitted by
+\textbf{Krupaba Dabhi (22BCE158)}, towards the partial fulfillment of the requirements for the award
+of the degree of Bachelor of Technology in Computer Science and Engineering, Nirma University,
+Ahmedabad, is the record of work carried out by her under my supervision and guidance. In my
+opinion, the submitted work has reached the level required for being accepted for examination.
+
+\vfill
+
+\noindent
+\begin{tabular}{@{} p{7.0cm} p{1.9cm} p{7.0cm} @{}}
+Dr Rupal Kapdi & & Dr Ankit Thakkar \\[4pt]
+Project Guide & & Professor and I/C Head \\[4pt]
+Dept.\ of Computer Science \& Engg. & & Dept.\ of Computer Science \& Engg. \\[4pt]
+Institute of Technology, & & School of Technology, \\
+Nirma University, Ahmedabad. & & Institute of Technology, \\
+ & & Nirma University, Ahmedabad. \\
+\end{tabular}
+\vspace{1cm}
+
+% ============================================================
+% INDUSTRY CERTIFICATE — internship duration email
+% ============================================================
+\newpage
+\thispagestyle{empty}
+\addcontentsline{toc}{chapter}{Industry Certificate}\index{Industry Certificate}
+\begin{center}
+{\Large \bf Industry Certificate}\\[0.3cm]
+\includegraphics[width=\textwidth,height=0.88\textheight,keepaspectratio]{figures/InternshipDuration.png}
+\end{center}
+
+% ============================================================
+% STATEMENT OF ORIGINALITY
+% ============================================================
+\newpage
+\vspace*{4cm}
+\addcontentsline{toc}{chapter}{Statement of Originality}\index{Statement of Originality}
+\begin{center}
+{\Large \bf Statement of Originality}\\
+\end{center}
+\vspace{-0.3cm}
+\noindent\rule{\linewidth}{0.4pt}\\[6pt]
+
+\noindent I, \textbf{Krupaba Dabhi}, Roll No.\ \textbf{22BCE158}, give an undertaking that the
+major project entitled \textbf{``Multi-Organ Abdominal CT Segmentation using Attention U-Net''}
+submitted by me, towards the partial fulfillment of the requirements for the degree of Bachelor of
+Technology in \textbf{Computer Science and Engineering}, Nirma University, Ahmedabad, contains no
+material that has been awarded for any degree or diploma in any university or school in any territory
+to the best of my knowledge. It is the original work carried out by me and I give assurance that no
+attempt of plagiarism has been made. It contains no material that is previously published or written,
+except where reference has been made. I understand that in the event of any similarity found
+subsequently with any published work or any dissertation work elsewhere; it will result in severe
+disciplinary action.
+
+\vspace{2cm}
+\noindent ----------------------------\\
+Signature of Student\\
+Date: April 2026\\
+Place: Ahmedabad\\
+
+\begin{flushright}
+Endorsed by \\
+Dr Rupal Kapdi \\
+(Signature of Guide)
+\end{flushright}
+
+% ============================================================
+% ACKNOWLEDGEMENTS
+% ============================================================
+\newpage
+\addcontentsline{toc}{chapter}{Acknowledgements}\index{Acknowledgements}
+\begin{center}
+{\Large \bf Acknowledgements}\\
+\end{center}
+\vspace{10pt}
+
+\noindent
+I would like to express my sincere thanks to my project guide \textbf{Dr Rupal Kapdi} for her patient guidance, thoughtful feedback, and continued encouragement. Every technical conversation with her resulted in an impactful enhancement of the work's focus and rigour.
+
+\noindent
+I am thankful to the \textbf{Department of Computer Science and Engineering, Institute of Technology, Nirma University} for providing the academic environment and computational access that made this research possible.
+
+\noindent
+I would like to thank the organisers of the \textbf{FLARE22 challenge} for releasing the abdominal CT dataset under an open-access licence. Without that benchmark, a project of this magnitude would have been impossible within the constraints of a B.Tech dissertation.
+
+\noindent
+Finally, I would like to thank my family and friends for their unwavering support and for putting up with far too many late-night training runs.
+
+\vspace{2cm}
+\begin{flushright}
+\textbf{--- Krupaba Dabhi}\\
+\textbf{22BCE158}
+\end{flushright}
+
+% ============================================================
+% ABSTRACT
+% ============================================================
+\newpage
+\addcontentsline{toc}{chapter}{Abstract}\index{Abstract}
+\begin{center}
+{\Large \bf Abstract}\\
+\end{center}
+\vspace{10pt}
+
+\noindent
+Accurate segmentation of abdominal organs from CT images is crucial for computer-aided diagnosis, surgical planning, and radiotherapy. Automated approaches are needed, as manual delineation is time-consuming and suffers from inter-observer variability. This project proposes a 2D Attention U-Net for multi-organ segmentation on the FLARE22 benchmark, which consists of 50 annotated CT volumes covering 13 abdominal structures --- liver, spleen, pancreas, aorta, inferior vena cava, both adrenal glands, gallbladder, esophagus, stomach, duodenum, and both kidneys.
+
+\noindent
+The model adds attention gates on all encoder--decoder skip connections to suppress irrelevant activations. Training uses a combined cross-entropy and Dice loss (equal weights) with a CosineAnnealingLR schedule and follows a strict per-volume train/val split (42/8 volumes) to prevent data leakage. Evaluation is performed using a per-volume Dice protocol following the FLARE22 convention, augmented with Test-Time Augmentation via a four-way flip ensemble.
+
+\noindent
+The final model achieves a mean Dice coefficient of \textbf{0.8769} and an HD95 of \textbf{7.59~mm} across all 13 organs, with major organs reaching a mean Dice of \textbf{0.9243}. Liver segmentation attains a Dice of 0.981. An ablation study confirms that TTA alone contributes $+$0.06 Dice and that the attention mechanism provides measurable gains on small structures. Although the proposed model operates entirely in 2D, it matches or exceeds published nnU-Net~3D results for both adrenal glands and the inferior vena cava.
+
+% ============================================================
+% ABBREVIATIONS
+% ============================================================
+\newpage
+\addcontentsline{toc}{chapter}{Abbreviations}\index{Abbreviations}
+\begin{center}
+{\Large \bf Abbreviations}\\
+\end{center}
+\vspace{6pt}
+\noindent\rule{\linewidth}{0.4pt}\\[6pt]
+
+\begin{tabular}{l p{0.5cm} l}
+\textbf{AMP}    & & Automatic Mixed Precision \\
+\textbf{BN}     & & Batch Normalisation \\
+\textbf{CNN}    & & Convolutional Neural Network \\
+\textbf{CT}     & & Computed Tomography \\
+\textbf{DSC}    & & Dice Similarity Coefficient \\
+\textbf{FCN}    & & Fully Convolutional Network \\
+\textbf{FLARE22}& & Fast and Low GPU-memory Abdominal oRgan sEgmentation 2022 \\
+\textbf{GPU}    & & Graphics Processing Unit \\
+\textbf{HD95}   & & 95th-Percentile Hausdorff Distance \\
+\textbf{HU}     & & Hounsfield Unit \\
+\textbf{IVC}    & & Inferior Vena Cava \\
+\textbf{LR}     & & Learning Rate \\
+\textbf{MRI}    & & Magnetic Resonance Imaging \\
+\textbf{NaN}    & & Not a Number \\
+\textbf{NIfTI}  & & Neuroimaging Informatics Technology Initiative \\
+\textbf{ReLU}   & & Rectified Linear Unit \\
+\textbf{TTA}    & & Test-Time Augmentation \\
+\textbf{U-Net}  & & U-shaped Encoder--Decoder Network \\
+\textbf{VRAM}   & & Video Random Access Memory \\
+\end{tabular}
+
+\noindent\rule{\linewidth}{0.4pt}\\

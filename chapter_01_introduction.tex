@@ -1,0 +1,83 @@
+\chapter{Introduction}
+\label{chap:intro}
+
+\section{Background and Motivation}
+
+One of the workhorses of modern hospital imaging is the abdominal CT scan. Tumour diagnosis, staging, surgical planning, radiotherapy target definition --- all of these processes rely at some stage on understanding precisely where each organ is located in the volume. Without that spatial context, downstream decisions --- how much dose to give, which margin to cut out, which structure to avoid --- are just educated guesses. This is a large problem: a busy radiology department can receive dozens of abdominal CTs a day, and each one ideally should result in a pixel-wise map of the organs before treatment planning can even get started.
+
+Manual organ delineation is an extremely tedious and time-consuming process. For a single CT volume consisting of $200$--$400$ axial slices, requiring delineation of 13 structures, a trained radiologist would usually spend between one and three hours producing an accurate segmentation. When scaled across the entire scan volume of a large hospital this bottleneck becomes apparent --- leading to delays in treatment planning, inter-observer variation, and higher-value diagnostic tasks being neglected. Automated segmentation reduces this burden, turning hours of manual work into seconds of computation.
+
+Deep convolutional architectures have radically changed the game for segmentation. The encoder--decoder framework popularised by U-Net~\cite{ronneberger2015} has been extended in many directions: by including attention mechanisms, by handling volumetric data, and by developing self-supervised pretraining algorithms. However, there remain some notable gaps. 3D approaches are computationally intensive, transformer approaches are data-hungry, and many published results still optimistically report per-slice evaluation metrics instead of per-volume metrics. This project aims to address these shortcomings specifically, through a careful implementation of a 2D Attention U-Net with a rigorous per-volume evaluation protocol.
+
+\begin{figure}[h!]
+\centering
+\begin{minipage}{0.97\textwidth}
+  \centering
+  \includegraphics[width=\textwidth]{figures/fig_pipeline}
+  \caption{End-to-end pipeline: raw CT volume $\rightarrow$ HU windowing $[-175, 250]$
+  $\rightarrow$ per-slice resize to $256\times256$ $\rightarrow$ Attention U-Net inference
+  $\rightarrow$ multi-organ segmentation mask (13 organ classes).}
+  \label{fig:pipeline}
+\end{minipage}
+\end{figure}
+
+\FloatBarrier
+
+\section{Problem Statement}
+
+Our problem is \emph{multi-organ semantic segmentation}: for every axial CT slice, assign every pixel a label from 14 options (background plus 13 abdominal organs). Three specific difficulties make this daunting. First, class ratios are extremely skewed --- the combined foreground voxels for the pancreas and adrenal glands are under 1\%. Second, shape distributions are highly variable across patients, especially for the stomach and duodenum. Third, 2D slice-by-slice processing is necessary due to GPU memory constraints on freely available hardware.
+
+A second caveat that only became obvious during our initial experiments is evaluation integrity. We observed that averaging Dice scores computed slice-by-slice gives misleadingly high average scores: the underlying problem is empty slices. When the prediction and the ground-truth are both all-zero, a na\"\i{}ve implementation with a smoothing term computes the Dice as 1.0. Though a handful of such slices inflates the average score for each volume, it actually obscures the true segmentation performance. We addressed this on a per-volume basis, using the protocol described in this report.
+
+\section{Objectives}
+
+\begin{itemize}
+    \item Implement a 2D Attention U-Net with attention gates on all skip connections for
+          multi-organ abdominal CT segmentation.
+    \item Train and evaluate on the FLARE22 benchmark using a per-volume evaluation protocol
+          consistent with the challenge's own scoring conventions.
+    \item Quantify the contribution of attention gates, Test-Time Augmentation, and cosine
+          learning-rate scheduling through a controlled ablation study.
+    \item Show competitive Dice and HD95 results against published nnU-Net 3D baselines,
+          while using only 2D processing and a single T4 GPU.
+\end{itemize}
+
+\section{Contributions}
+
+The principal contributions of this project are summarised in Table~\ref{tab:contributions}.
+
+\begin{table}[h!]
+\centering
+\caption{Summary of contributions.}
+\label{tab:contributions}
+\begin{tabular}{p{3.5cm} p{7cm} p{2.5cm}}
+\toprule
+\textbf{Contribution} & \textbf{Description} & \textbf{Chapter} \\
+\midrule
+Attention U-Net implementation &
+  Full PyTorch implementation with attention gates on all four skip connections, Dropout2d
+  bottleneck, and AMP-enabled training. &
+  Chapter~\ref{chap:methodology} \\[6pt]
+Per-volume evaluation fix &
+  Identified and corrected the per-slice Dice inflation bug; established a per-volume evaluation
+  loop consistent with FLARE22 conventions. &
+  Chapter~\ref{chap:eval} \\[6pt]
+TTA ensemble &
+  Four-way horizontal/vertical flip ensemble with softmax averaging, adding $+$0.06 Dice at zero
+  extra training cost. &
+  Chapter~\ref{chap:eval} \\[6pt]
+Ablation study &
+  Controlled comparison across Runs~014--017 isolating the effect of data volume, attention gates,
+  cosine LR, and TTA. &
+  Chapter~\ref{chap:ablation} \\[6pt]
+Competitive results on tight hardware &
+  Mean Dice 0.8769, HD95 7.59~mm on 13 organs; numerically exceeding the nnU-Net 3D baseline
+  on 7 of 13 organs using only 2D slices and a single T4 GPU. &
+  Chapter~\ref{chap:results} \\
+\bottomrule
+\end{tabular}
+\end{table}
+
+\section{Report Organisation}
+
+Chapter~\ref{chap:lit} and Chapter~\ref{chap:data} provide an overview of the related work on segmentation of medical images, attention mechanisms, and the FLARE22 benchmark respectively. Chapter~\ref{chap:methodology} provides a detailed explanation of the Attention U-Net architecture and the loss function. Chapter~\ref{chap:train} introduces the training configuration, while Chapter~\ref{chap:eval} details our evaluation protocol and justifies our choice. Chapter~\ref{chap:results} presents the quantitative results, and Chapter~\ref{chap:ablation} covers the ablation study and interpretation of the results. The conclusion and future directions can be found in Chapters~\ref{chap:conc} and \ref{chap:future}.

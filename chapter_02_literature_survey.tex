@@ -1,0 +1,40 @@
+\chapter{Literature Survey}
+\label{chap:lit}
+
+\section{Traditional Segmentation Methods}
+
+Before deep learning changed the scene, atlas-based methods set the standard for abdominal organ segmentation. The approach starts with a probabilistic atlas built from manually labelled scans. To segment a new image, you warp this atlas to fit using deformable registration. This works well enough for large, fairly consistent organs like the liver, but when applied to structures like the pancreas or adrenal glands --- organs with high inter-patient shape variability --- the results degrade. Registration itself is computationally expensive; segmenting a single volume can take tens of minutes even on modern hardware.
+
+Graph-cut and random-forest methods sped things up by exploiting hand-crafted features --- Haar wavelets, HOG descriptors, and local intensity histograms --- alongside shape priors to label voxels. On tightly controlled benchmarks they held their own, but building those features demanded labour-intensive engineering and the results seldom transferred well across scanner protocols or patient populations.
+
+\section{U-Net and Encoder--Decoder Architectures}
+
+The seminal contribution of Ronneberger et al.~\cite{ronneberger2015} was to show that an encoder--decoder with \emph{skip connections} can learn to segment biomedical images from relatively small annotated datasets. The encoder progressively downsamples the input, building a hierarchy of feature maps that capture increasingly abstract representations. The decoder mirrors this hierarchy, upsampling back to the original resolution. Skip connections concatenate encoder feature maps directly to the corresponding decoder level, preserving fine-grained spatial detail that would otherwise be lost through pooling.
+
+U-Net was originally proposed for 2D histology images, but its architecture adapted easily to 3D CT and MRI. 3D U-Net variants process entire volumes through 3D convolutions, capturing inter-slice context that 2D models miss. The cost is cubic --- doubling the spatial extent roughly octuples the VRAM requirement --- making 3D processing impractical on commodity GPUs for high-resolution volumes.
+
+\section{Attention Mechanisms in Segmentation}
+
+Attention gates, introduced by Oktay et al.~\cite{oktay2018}, address a specific weakness of standard skip connections: they pass \emph{all} encoder features to the decoder, including activations from background regions that add noise rather than signal. An attention gate learns to assign a compatibility score at each spatial location --- comparing the encoder feature map against a gating signal from deeper in the network --- and uses that score to amplify regions relevant to the target organ while suppressing background clutter. The gate is differentiable and adds only a small number of parameters.
+
+Experimentally, attention gates improve Dice on small, irregular structures more than on large organs --- intuitive, because large organs dominate the loss regardless, while small structures benefit most from the noise reduction. This project's ablation confirms that pattern on the FLARE22 dataset: adrenal gland Dice improves by approximately 0.03 when attention is enabled.
+
+\section{nnU-Net}
+
+Isensee et al.~\cite{isensee2021} demonstrated that a carefully configured vanilla U-Net, with no architectural novelty, consistently outperforms bespoke methods when preprocessing, normalisation, patch size, and post-processing are tuned systematically per dataset. Their framework, nnU-Net, automatically configures itself from the dataset fingerprint and has topped numerous segmentation benchmarks. It provides the natural baseline for this project: the question is not whether a 2D model can surpass nnU-Net~3D in general, but whether it can match it on organs where 2D context is sufficient and where the efficiency advantage of 2D processing matters.
+
+\section{The FLARE22 Benchmark}
+
+The FLARE22 challenge~\cite{flare22} provides 50 CT volumes with voxel-level annotations for 13 abdominal organs. The benchmark emphasises two practical constraints: low GPU memory usage and fast inference. Published nnU-Net~3D results on FLARE22 serve as the comparison point throughout this report. The challenge uses a per-volume evaluation protocol --- computing Dice per organ per volume and averaging --- which this project adopts in full.
+
+\section{The Hausdorff Distance as a Metric}
+
+Dice measures volumetric overlap but is insensitive to boundary quality. A model that correctly identifies 95\% of an organ's volume but places the boundary 20~mm off in one region still achieves a high Dice. The 95th-percentile Hausdorff Distance (HD95) captures exactly this failure mode --- it measures the worst-case boundary error, excluding the top 5\% of outliers to reduce sensitivity to isolated segmentation failures. Karimi and Salcudean~\cite{karimi2020} provide a thorough analysis of HD-based loss functions and metrics in the medical imaging context. This project reports both Dice and HD95, consistent with FLARE22 convention.
+
+\section{Learning Rate Scheduling}
+
+Cosine annealing, introduced by Loshchilov and Hutter~\cite{loshchilov2017}, smoothly reduces the learning rate from its initial value to a minimum following a half-cosine curve over a fixed number of epochs. Compared with step-based schedules, cosine annealing avoids abrupt learning rate drops that can destabilise training, and the smooth decay has been shown empirically to improve final accuracy across image classification and segmentation tasks. This project uses \texttt{CosineAnnealingLR} with $T_{\max} = 60$ and $\eta_{\min} = 10^{-6}$.
+
+\section{Summary}
+
+The literature establishes three things relevant to this project. First, the encoder--decoder with skip connections is a robust foundation for medical image segmentation. Second, attention gates provide targeted improvement on small, irregular structures at low parameter cost. Third, rigorous evaluation --- per-volume Dice, HD95, honest train/val splitting --- is as important as architectural choice. This project combines all three insights in a practical system that runs on freely available hardware.
